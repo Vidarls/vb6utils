@@ -1,0 +1,3 @@
+VBGROUP 5.0
+StartupProject=vb6utils\vb6utils.vbp
+Project=oldunit\Src\OldUnit\OldUnit.vbp
