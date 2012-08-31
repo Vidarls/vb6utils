@@ -1,8 +1,12 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\WINDOWS\system32\STDOLE2.TLB#OLE Automation
+Reference=*\A..\oldunit\Src\OldUnit\OldUnit.vbp
 Module=Strng; Strng.bas
 Module=List; List.bas
 Class=Lst; Lst.cls
+Module=tests; tests\tests.bas
+Class=map_reduce_tests; tests\map_reduce_tests.cls
+Class=string_format_tests; tests\string_format_tests.cls
 Startup="Sub Main"
 HelpFile=""
 Command32=""
