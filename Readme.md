@@ -24,7 +24,7 @@ String.Format:
 
 Supports all primitives, but no customizeable formatting yet, and no support for complex classes.
 
-1. Include the file Strng.bas in your project
+1. Include the files Strng.bas, List.bas an Lst.cls in your project (strng.frmt depends on the map/reduce stuff)
 2. Use like .net String.format, only it's called "Strng.Frmt" to not conflict with vb6 perfectly scoped naming of other stuff.
 3. Example: Strng.Frmt("I {0} using Vb6", "an adjective") -> Results in the string "I an adjective using Vb6"
 
