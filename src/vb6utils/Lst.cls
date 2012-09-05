@@ -110,6 +110,23 @@ Public Function Distinct() As Lst
   Set Distinct = Filter(Me, "internalDistinctFilter")
 End Function
 
+Public Function FirstOrDefault(Optional default As Variant = Empty) As Variant
+  If internalCollection.Count < 1 Then
+    If IsObject(default) Then
+      Set FirstOrDefault = default
+    Else
+      FirstOrDefault = default
+    End If
+    Exit Function
+  End If
+  
+  If IsObject(internalCollection(1)) Then
+    Set FirstOrDefault = internalCollection(1)
+  Else
+    FirstOrDefault = internalCollection(1)
+  End If
+End Function
+
 Public Function internalDistinctFilter(entry As Variant, args() As Variant) As Boolean
   internalDistinctFilter = Not List.From(internalDistinctCollection).Contains(entry)
 End Function
