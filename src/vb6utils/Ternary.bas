@@ -19,5 +19,5 @@ Public Function Choose(expression As Boolean, trueValue As Variant, falseValue A
 End Function
 
 Public Function DbNullCoalesce(fieldReference As Variant, defaultIfNull) As Variant
-  DbNullCoalesce = Choose(IsNull(fieldReference), fieldReference, defaultIfNull)
+  DbNullCoalesce = Choose(IsNull(fieldReference), defaultIfNull, fieldReference)
 End Function
