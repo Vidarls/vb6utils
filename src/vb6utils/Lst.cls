@@ -105,6 +105,32 @@ Public Function Contains(entry As Variant) As Boolean
   Contains = (Filter(Me, "internalContainsFilter", entry).Count > 0)
 End Function
 
+Public Function Except(somethingEnumerable As Variant) As Lst
+  Dim newList As New Lst
+  Dim entry As Variant
+  Dim comparisonList As Lst
+  Set comparisonList = List.From(somethingEnumerable)
+  
+  For Each entry In internalCollection
+    If Not comparisonList.Contains(entry) Then newList.Add entry
+  Next entry
+  
+  Set Except = newList
+End Function
+
+Public Function Intersect(somethingEnumerable As Variant) As Lst
+  Dim newList As New Lst
+  Dim entry As Variant
+  Dim comparisonList As Lst
+  Set comparisonList = List.From(somethingEnumerable)
+  
+  For Each entry In internalCollection
+    If comparisonList.Contains(entry) Then newList.Add entry
+  Next entry
+  
+  Set Intersect = newList
+End Function
+
 Public Function Distinct() As Lst
   Set internalDistinctCollection = New Collection
   Set Distinct = Filter(Me, "internalDistinctFilter")
