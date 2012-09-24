@@ -203,5 +203,5 @@ On Error GoTo failed
   CompareWithObjectEquals = this.Equals(other)
 Exit Function
 failed:
-  CompareWithObjectEquals = (this = other)
+  CompareWithObjectEquals = (this Is other)
 End Function
