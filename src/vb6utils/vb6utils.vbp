@@ -7,6 +7,7 @@ Class=Lst; Lst.cls
 Module=tests; tests\tests.bas
 Class=map_reduce_tests; tests\map_reduce_tests.cls
 Class=string_format_tests; tests\string_format_tests.cls
+Module=Ternary; Ternary.bas
 Startup="Sub Main"
 HelpFile=""
 Command32=""
